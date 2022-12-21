@@ -4,6 +4,7 @@ import { Route, Routes, useNavigate } from "react-router-dom";
 import SearchBooks from "./SearchBooks";
 import MyBooks from "./MyBooks";
 import * as BooksAPI from "./BooksAPI";
+import NotFound from "./NotFound";
 
 function App() {
   let navigate = useNavigate();
@@ -46,6 +47,7 @@ function App() {
   return (
     <div className="app">
       <Routes>
+        <Route path="/*" element={<NotFound />} />
         <Route
           exact
           path="/"
